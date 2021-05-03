@@ -14,11 +14,11 @@ newEmails = list([])
 newUniqueEmails = list([])
 
 # Reading Csv files
-with open(masterEmailsFile, newline='', encoding="utf8") as masterFile: # Added Encoding utf8 because, windows using ASCII as default
+with open(masterEmailsFile, newline='', encoding="utf8", errors="ignore") as masterFile: # Added Encoding utf8 because, windows using ASCII as default
 	reader =  csv.reader(masterFile)
 	masterEmails = list(reader)
 
-with open(newEmailsFile, newline='', encoding="utf8") as newFile:
+with open(newEmailsFile, newline='', encoding="utf8", errors="ignore") as newFile:
 	reader =  csv.reader(newFile)
 	newEmails = list(reader)
 
